@@ -37,6 +37,42 @@ browser.webRequest.onBeforeRequest.addListener(
     ["blocking"]
 );
 
+// Filter out fbclid query parameter
+function clean_fbclid(requestDetails) {
+    var url = new URL(requestDetails.url)
+
+    if (url.search.length > 0) {
+        var params = url.searchParams;
+        var new_params = new URLSearchParams(params);
+        var needs_redirect = false;
+        for (let p of params.keys()) {
+            if (p.indexOf("fbclid") >= 0) {
+                needs_redirect = true;
+                new_params.delete(p);
+            }
+        }
+
+        if (needs_redirect) {
+            var new_url = new URL(url);
+            new_url.search = new_params.toString();
+
+            return {
+                redirectUrl: new_url.href
+            }
+        }
+    }
+
+    return { }
+}
+
+browser.webRequest.onBeforeRequest.addListener(
+    clean_fbclid,
+    {
+        urls: ["<all_urls>"],
+        types:["main_frame"]
+	  },
+    ["blocking"]
+);
 
 function clean_amazon(requestDetails) {
     var url = requestDetails.url;

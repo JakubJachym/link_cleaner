@@ -16,6 +16,10 @@ tracking-enabled ones!
     http://meyerweb.com/eric/thoughts/2017/03/07/welcome-to-the-grid/?utm_source=frontendfocus&utm_medium=email  
   is changed to:  
     http://meyerweb.com/eric/thoughts/2017/03/07/welcome-to-the-grid/
+- Facebook's `fbclid` removal:
+    http://meyerweb.com/eric/thoughts/2017/03/07/welcome-to-the-grid/?fbclid=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+  is changed to:
+    http://meyerweb.com/eric/thoughts/2017/03/07/welcome-to-the-grid/
 - amazon item url:  
     https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYQ02/ref=sr_1_1?s=amazonbasics&srs=10112675011&ie=UTF8&qid=1489067885&sr=8-1&keywords=usb-c  
   is changed to:  

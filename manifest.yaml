@@ -6,7 +6,7 @@ version: '1.5'
 
 description: >
   Clean URLs that are about to be visited:
-  - removes utm_* parameters
+  - removes utm_* and fbclid parameters
   - on item pages of aliexpress and amazon, removes tracking parameters
   - skip redirect pages of facebook, steam and reddit (directly go to the url
   being redirected to, and never hit their outgoing redirect tracking)
